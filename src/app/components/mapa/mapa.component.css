@@ -1,0 +1,63 @@
+agm-map {
+    width: 90vw;
+    height: 83vh;
+  }
+  .modales{
+    width: 80vw;
+    height: 80vh;
+    background: floralwhite;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 6px;
+  }
+  .container-form{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
+  .container-form.active{
+    visibility: visible;
+    opacity: 1;
+  }
+  .nombre{
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    border-top: 2px solid rgba(0,0,0,.8);
+    border-bottom: 2px solid rgba(0,0,0,.8);
+    
+  }
+  .descripcion{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: black
+  }
+  .titulo-creacion{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .boton{
+    text-align: center;
+  }
+  .cuadroAyuda{
+    background: red !important;
+  }

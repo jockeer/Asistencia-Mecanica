@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12 text-center login" *ngIf="!_cs.usuario.uid">
+      <p class="titulo-login">
+        Ingrese al chat con su cuenta favorita
+      </p>
+      <div class="botones-login">
+        <button type="button" class="btn btn-danger" (click)="ingresar('google')">
+          Google
+        </button>
+        <button type="button" class="btn btn-primary" (click)="ingresar('facebook')">
+          Facebook
+        </button>
+
+      </div>
+  </div>
+
+  <div *ngIf="_cs.usuario.uid">
+    <app-chat></app-chat>
+  </div>
+</div> 

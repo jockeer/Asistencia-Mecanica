@@ -1,0 +1,39 @@
+<agm-map (mapClick)="agregarMarcador( $event )" [latitude]="lat" [longitude]="lng" [zoom]="13">
+    <!-- <agm-marker *ngFor="let marcador of marcadores; let i = index" [latitude]="marcador.lat" [longitude]="marcador.lng"> -->
+    <agm-marker *ngFor="let lugar of _ls.lugares; let i = index; let marcador of marcadores" [latitude]="lugar.lat" [longitude]="lugar.lng">
+      <agm-info-window>
+        <strong class="nombre">{{lugar.nombre}}</strong>
+        <p class="descripcion">{{lugar.descripcion}}</p>
+        <div class="boton">
+          <!-- <button (click)="editarMarcador( marcador )" mat-raised-button color="primary">Editar</button> -->
+          <!-- <button (click)="borrarMarcador(i)" mat-raised-button color="warm">Borrar</button> -->
+          <a class="btn btn-info" [routerLink]="['/login']">pedir Ayuda!</a>
+        </div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+      <div class="container-form" id="form">
+        <div class="modales">
+          <div class="titulo-creacion">
+            <h3>
+              Ingrese los datos del taller..
+            </h3>
+          </div>
+            <mat-form-field>
+                <input matInput placeholder="Nombre" [(ngModel)]="nombre" /> 
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="Descripcion" [(ngModel)]="descripcion" /> 
+              </mat-form-field>
+            
+            <div class="botones">
+              <button (click)="guardarDatabase()" class="btn btn-success">
+                Enviar
+              </button>
+              <button (click)="cancelar()" class="btn btn-warning">
+                Cancelar
+              </button>
+
+            </div>
+        </div>
+      </div>
